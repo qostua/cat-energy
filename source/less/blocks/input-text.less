@@ -1,0 +1,22 @@
+@import "../mixins.less";
+@import "../variables.less";
+
+.input-text {
+  .no-indent;
+
+  .main-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @grey-5;
+  &::placeholder {
+    color: @grey-5;
+  }
+}
+.input-textarea {
+  &:extend(.input-text);
+  &::placeholder {
+    color: @grey-5;
+  }
+  resize: none;
+}
