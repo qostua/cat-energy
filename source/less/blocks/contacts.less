@@ -2,7 +2,10 @@
 @import "../variables.less";
 
 .contacts {
-
+  background-color: @grey-1;
+}
+.contacts--index {
+  background-color: white;
 }
 .contacts__header {
 
@@ -11,11 +14,12 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  font-weight: 400;
 }
 .contacts__adresse {
   .no-indent;
 
-  font-family: "Arial", sans-serif;
+  .text-font;
   font-size: 14px;
   line-height: 20px;
   color: @grey-5;
