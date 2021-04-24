@@ -1,2 +1,40 @@
 @import "../mixins.less";
 @import "../variables.less";
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 66px;
+
+  padding: 0 20px;
+}
+
+@media (min-width: 785px) {
+  .page-header {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 1457px) {
+  .page-header {
+    padding: 50px 0;
+    margin-bottom: 23px;
+  }
+  .page-header--white-nav {
+    &::after {
+      content: "";
+
+      width: 50%;
+      height: 694px;
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 50%;
+
+      background-color: @green-2;
+    }
+  }
+}
