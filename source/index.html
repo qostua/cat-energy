@@ -2,30 +2,29 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="page-header">
+    <header class="page-header page-header--white-nav container">
       <a class="page-header__logo link">
-        <img class="logo page-header__logo-img" src="http://placehold.it/34x38" alt="Логотип сайта" width="34" height="38">
+        <img class="logo page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип сайта" width="34" height="38">
       </a>
-      <a class="page-header__logo-text-link link">
-        <img class="logo-text page-header__logo-text" src="http://placehold.it/101x18" alt="Cat Energy" width="101" height="18">
+      <a class="page-header__logo-text link">
+        <img class="logo-text page-header__logo-text" src="img/logo-mobile-text.svg" alt="Cat Energy" width="101" height="18">
       </a>
       <nav class="main-nav">
-        <button class="menu-toggle main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
-            <a class="link">Главная</a>
+          <li class="main-nav__item main-nav__item--white">
+            <a class="main-nav__link main-nav__link--active link">Главная</a>
           </li>
-          <li class="main-nav__item">
-            <a class="link" href="catalog.html">Каталог продукции</a>
+          <li class="main-nav__item main-nav__item--white">
+            <a class="main-nav__link link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-nav__item">
-            <a class="link" href="form.html">Подбор программы</a>
+          <li class="main-nav__item main-nav__item--white">
+            <a class="main-nav__link link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -35,11 +34,15 @@
       <h1 class="visually-hidden">Магазин Cat Energy</h1>
 
       <section class="promo">
-        <h2 class="promo__title">Функциональное питание для котов</h2>
+        <div class="promo__container">
+          <h2 class="promo__title">Функциональное <br> питание для котов</h2>
 
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <p class="promo__img-wrap"><img class="promo__img" src="http://placehold.it/280x270" alt="Фото товара «Cat Energy Pro - Курица»" width="280" height="270"></p>
-        <a class="promo__get-program link btn" href="form.html">Подобрать программу</a>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <div class="promo__container-img-get-program">
+            <p class="promo__img-wrap"><img class="promo__img" src="img/product-promo.png" alt="Фото товара «Cat Energy Pro - Курица»" width="280" height="270"></p>
+            <a class="promo__get-program link btn" href="form.html">Подобрать программу</a>
+          </div>
+        </div>
       </section>
 
       <section class="programs">
