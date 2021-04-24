@@ -3,26 +3,130 @@
 
 .promo {
   background-color: @green-2;
+  background-image: linear-gradient(@green-2 305px, white 305px);
+
   color: white;
+
+  padding-top: 28px;
+}
+.promo__container {
+  width: 280px;
+
+  padding: 0 20px;
+  margin: 0 auto;
 }
 .promo__title {
   .no-indent;
+  margin-bottom: 24px;
 
   font-size: 36px;
   font-weight: 300;
+  line-height: 36px;
+  text-align: center;
 }
 .promo__slogan {
   .no-indent;
+  margin-bottom: 29px;
 
+  font-size: 14px;
+  line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
 }
 .promo__img-wrap {
   .no-indent;
+  margin-bottom: 3px;
 
+  display: flex;
+  justify-content: center;
 }
-.promo__img {
 
+@media (min-width: 785px) {
+  .promo {
+    background: none;
+
+    color: black;
+
+    padding-top: 34px;
+  }
+  .promo__container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 88px;
+
+    width: 708px;
+  }
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+
+    margin-bottom: 42px;
+  }
+  .promo__slogan {
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-bottom: 20px;
+  }
+  .promo__container-img-get-program {
+    position: relative;
+  }
+  .promo__img-wrap {
+    width: 708px;
+    min-height: auto;
+
+    margin: 0 -88px;
+  }
+  .promo__img {
+    margin-left: auto;
+
+    object-fit: contain;
+
+    height: 609px;
+    width: auto;
+  }
+  .promo__get-program {
+    position: absolute;
+
+    top: 28px;
+    left: -5px;
+  }
 }
-.promo__get-program {
+@media (min-width: 1457px) {
+  .promo {
+    min-height: 500px;
 
+    position: relative;
+  }
+  .promo__container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 80px;
+
+    width: 1220px;
+  }
+  .promo__container-img-get-program {
+    position: static;
+  }
+  .promo__img-wrap {
+    width: auto;
+    min-height: auto;
+
+    position: relative;
+  }
+  .promo__img {
+    height: 499px;
+    width: auto;
+
+    position: absolute;
+    top: -283px;
+    left: 492px;
+  }
+  .promo__get-program {
+    position: static;
+
+    margin-top: 30px;
+  }
 }
