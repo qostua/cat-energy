@@ -3,15 +3,32 @@
 
 .btn {
   .no-indent;
+  padding: 11px 0;
+  box-sizing: border-box;
 
-  background: none;
+  display: inline-block;
+
+  width: 100%;
+
+  background: @green-1;
+
   border: none;
 
   .main-font;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 18px;
+  text-align: center;
+  color: white;
 }
 .btn--cart {
   font-size: 16px;
+}
+
+@media (min-width: 785px) {
+  .btn {
+    width: auto;
+    font-size: 20px;
+    padding: 18px 26px;
+  }
 }
