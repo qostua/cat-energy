@@ -3,56 +3,238 @@
 
 .example {
   background-color: #EAEAEA;
+
+  padding: 27px 0 37px;
+  margin-bottom: 28px;
 }
 .example__title {
   .no-indent;
 
-  font-size: 36px;
-  line-height: 40px;
+  margin-bottom: 34px;
+
+  .font(36px, 40px);
+  font-weight: normal;
 }
 .example__text {
   .no-indent;
+  margin-bottom: 26px;
 
   font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  .font(14px, 18px);
 }
 .example__results {
   .no-indent;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.example__result-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 125px;
 }
 .example__results-title {
-  font-size: 24px;
-  line-height: 24px;
+  .font(24px, 24px);
   text-transform: uppercase;
+  text-align: center;
+
+  padding: 15px 7px;
+
+  border: 1px solid @grey-3;
+  border-radius: 3px;
+
+  box-sizing: border-box;
+  width: 100%;
 }
 .example__results-text {
   .no-indent;
+  padding: 0 7px;
 
+  background-color: #EAEAEA;
+
+  @line-height: 12px;
   .text-font;
+  .font(12px, @line-height);
   color: @grey-5;
-  font-size: 12px;
-  line-height: 12px;
+  text-align: center;
+
+  transform: translateY(-(@line-height * 2/3));
+
+  box-sizing: border-box;
+  width: 87px;
 }
 .example__expenses {
-  font-size: 14px;
-  line-height: 20px;
+  .no-indent;
+  margin-bottom: 42px;
+
+  .font(14px, 20px);
   text-transform: uppercase;
-  font-weight: 400;
+  text-align: center;
+}
+.example__img-range-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .example__img-wrap {
-  .no-indent;
+  display: flex;
+
+  width: 100%;
 }
 .example__img {
+  .no-indent;
+  margin-bottom: 14px;
+
   display: none;
+
+  min-height: 250px;
+  width: 100%;
+}
+.example__img--fat-cat {
+  background-color: red;
+}
+.example__img--thin-cat {
+  background-color: blue;
 }
 .example__img--showed {
-  display: block;
+  display: flex;
+}
+.example__form {
+  display: flex;
+  align-items: center;
 }
 .example__form-lable {
-  font-size: 16px;
-  line-height: 20px;
+  .font(16px, 20px);
   text-transform: uppercase;
 }
-.example__form-range {
-  .no-indent;
+
+@media (min-width: 785px) {
+  .example {
+    background-color: white;
+    background-image: linear-gradient(to top, #EAEAEA 460px, transparent 460px);
+
+    padding: 0 0 75px;
+  }
+  .example__title {
+    .font(60px, 60px);
+
+    margin-bottom: 65px;
+  }
+  .example__text {
+    .font;
+
+    margin-bottom: 53px;
+  }
+  .example__results-expenses-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .example__results {
+    width: 365px;
+    margin-bottom: 75px;
+  }
+  .example__result-wrap {
+    width: 160px;
+  }
+  .example__results-title {
+    .font(30px, 37px);
+
+    padding: 15px 7px;
+  }
+  .example__results-text {
+    .font(14px, 14px);
+
+    max-width: 142px;
+    width: auto;
+
+    background-color: white;
+  }
+  .example__expenses {
+    margin-bottom: auto;
+    margin-top: 6px;
+
+    .font(20px, 30px);
+    text-align: right;
+
+    width: 190px;
+  }
+  .example__img {
+    min-height: 520px;
+
+    display: block;
+    margin-bottom: 16px;
+  }
+  .example__form-lable {
+    .font(20px, 20px);
+
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #B8B8B8;
+  }
+  .example__form:hover .example__form-lable {
+    border-bottom: 1px solid #919191;
+  }
+  .example__form:active .example__form-lable {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1457px) {
+  .example {
+    background-image: linear-gradient(transparent 195px, #EAEAEA 195px);
+
+    padding: 0;
+    padding-bottom: 70px;
+  }
+  .example__left-column {
+    display: flex;
+    flex-direction: column;
+
+    width: 440px;
+    min-height: 585px;
+  }
+  .example__text {
+    width: 440px;
+
+    margin-bottom: 70px;
+  }
+  .example__img-range-wrap {
+    width: 650px;
+  }
+  .example__title {
+    padding-top: 58px;
+    margin-bottom: auto;
+  }
+  .example__results-expenses-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .example__results {
+    margin-bottom: 40px;
+  }
+  .example__results-text {
+    background: #EAEAEA;
+  }
+  .example__expenses {
+    width: auto;
+  }
+  .example__expenses-price {
+    margin-left: 60px;
+  }
+  .example__img-wrap {
+    width: 100%;
+  }
+  .example__img--thin-cat {
+    width: 285px;
+  }
+  .example__img--fat-cat {
+    width: 365px;
+  }
+  .example__form {
+    margin-left: auto;
+    margin-top: 25px;
+  }
 }
