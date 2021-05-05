@@ -1,6 +1,44 @@
 @import "../mixins.less";
 @import "../variables.less";
 
+<<<<<<< Updated upstream
+=======
+.main-nav {
+  display: flex;
+}
+.main-nav__toggle {
+  width: 24px;
+  height: 18px;
+
+  border: none;
+  background: none;
+
+  position: relative;
+
+  &:hover {
+    background-image: url("../img/menu-toggle-close.svg");
+    background-position: 13px 3px;
+  }
+
+  &:hover ~ .main-nav__list {
+    display: flex;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: black;
+    box-shadow: 0 -8px 0 0 black, 0 -16px 0 0 black;
+  }
+}
+>>>>>>> Stashed changes
 .main-nav__list {
   .no-mark;
   .no-indent;
