@@ -3,41 +3,56 @@
 
 .example {
   background-color: #EAEAEA;
+
+  padding: 27px 0 35px;
+  margin-bottom: 28px;
 }
 .example__title {
   .no-indent;
 
-  font-size: 36px;
-  line-height: 40px;
+  margin-bottom: 34px;
+
+  .font(36px, 40px);
+  font-weight: normal;
 }
 .example__text {
   .no-indent;
-<<<<<<< Updated upstream
-=======
   margin-bottom: 27px;
->>>>>>> Stashed changes
 
   font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  .font(14px, 18px);
 }
 .example__results {
   .no-indent;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.example__result-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 125px;
 }
 .example__results-title {
-  font-size: 24px;
-  line-height: 24px;
+  .font(24px, 24px);
   text-transform: uppercase;
+  text-align: center;
+
+  padding: 15px 7px;
+
+  border: 1px solid @grey-3;
+  border-radius: 3px;
+
+  box-sizing: border-box;
+  width: 100%;
 }
 .example__results-text {
   .no-indent;
+  padding: 0 7px;
 
-<<<<<<< Updated upstream
-  .text-font;
-  color: @grey-5;
-  font-size: 12px;
-  line-height: 12px;
-=======
   background-color: #EAEAEA;
 
   .text-font;
@@ -49,33 +64,28 @@
 
   box-sizing: border-box;
   width: 87px;
->>>>>>> Stashed changes
 }
 .example__results-expenses-wrap {
   margin-bottom: 42px;
 }
 .example__expenses {
-<<<<<<< Updated upstream
-  font-size: 14px;
-  line-height: 20px;
-=======
   .no-indent;
 
   .font(14px, 20px);
->>>>>>> Stashed changes
   text-transform: uppercase;
-  font-weight: 400;
+  text-align: center;
+}
+.example__img-range-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .example__img-wrap {
-  .no-indent;
+  display: flex;
+
+  width: 100%;
 }
 .example__img {
-<<<<<<< Updated upstream
-  display: none;
-}
-.example__img--showed {
-  display: block;
-=======
   .no-indent;
   margin-bottom: 14px;
 
@@ -110,17 +120,11 @@
 .example__form {
   display: flex;
   align-items: center;
->>>>>>> Stashed changes
 }
 .example__form-lable {
-  font-size: 16px;
-  line-height: 20px;
+  .font(16px, 20px);
   text-transform: uppercase;
 }
-<<<<<<< Updated upstream
-.example__form-range {
-  .no-indent;
-=======
 
 @media (min-width: 785px) {
   .example {
@@ -289,5 +293,4 @@
     margin-left: auto;
     margin-top: 25px;
   }
->>>>>>> Stashed changes
 }
