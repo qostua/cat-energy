@@ -8,13 +8,18 @@
   background-color: white;
 }
 .contacts__header {
+  display: flex;
+  justify-content: space-between;
 
+  margin-bottom: 27px;
 }
 .contacts__title {
   font-size: 16px;
-  line-height: 18px;
+  line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
+
+  width: 50%;
 }
 .contacts__adresse {
   .no-indent;
@@ -23,7 +28,47 @@
   font-size: 14px;
   line-height: 20px;
   color: @grey-5;
+
+  width: 50%;
 }
 .contacts__map-wrap {
 
+}
+.contacts__map-widget {
+  .no-indent;
+
+  position: relative;
+  overflow: hidden;
+  height: 360px;
+  width: 100%;
+}
+
+@media (min-width: 785px) {
+  .contacts__header {
+    margin-bottom: 58px;
+  }
+  .contacts__title {
+    .font(20px, 26px);
+
+    width: 170px;
+  }
+  .contacts__adresse {
+    .font(16px, 20px);
+    text-align: right;
+
+    width: 170px;
+  }
+  .contacts__adresse-city {
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .contacts__map-widget {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1457px) {
+  .contacts__header {
+    display: none;
+  }
 }
