@@ -3,29 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Cat Energy</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="page-header">
-      <a href="index.html" class="page-header__logo-link link">
-        <img class="logo page-header__logo-img" src="http://placehold.it/34x38" alt="Логотип сайта" width="34" height="38">
+    <header class="page-header container">
+      <a class="page-header__logo link" href="index.html">
+        <img class="logo page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип сайта" width="34" height="38">
       </a>
-      <a href="index.html" class="page-header__logo-text-link link">
-        <img class="logo-text page-header__logo-text" src="http://placehold.it/101x18" alt="Cat Energy" width="101" height="18">
+      <a class="page-header__logo-text link" href="index.html">
+        <img class="logo-text page-header__logo-text" src="img/logo-mobile-text.svg" alt="Cat Energy" width="101" height="18">
       </a>
       <nav class="main-nav">
-        <button class="menu-toggle main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html link" class="link">Главная</a>
-          </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a href="catalog.html" class="link">Каталог продукции</a>
+            <a class="main-nav__link link"  href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="link">Подбор программы</a>
+            <a class="main-nav__link link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active link">Подбор программы</a>
           </li>
         </ul>
       </nav>
