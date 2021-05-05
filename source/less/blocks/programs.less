@@ -1,28 +1,238 @@
 @import "../mixins.less";
 @import "../variables.less";
 
+.programs {
+  margin-bottom: 25px;
+}
 .programs__list {
   .no-mark;
+
   .no-indent;
+
+  display: flex;
+  flex-direction: column;
 }
 .programs__item {
   background-color: @grey-1;
+
+  padding: 30px 20px 15px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .programs__title {
   .no-indent;
+  padding-left: 70px;
+  margin-bottom: 30px;
 
-  font-size: 24px;
-  line-height: 37px;
+  .font(24px);
+  font-weight: normal;
+  text-transform: uppercase;
+
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+  }
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 25px;
+
+    background-color: @green-1;
+  }
+}
+.programs__title--slim::after {
+  width: 36px;
+  height: 50px;
+
+  left: 7px;
+  bottom: -5px;
+
+  background-image: url(../img/icon-cat-slim.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.programs__title--pro::after {
+  width: 67px;
+  height: 28px;
+
+  left: -9px;
+  bottom: 4px;
+
+  background-image: url(../img/icon-cat-pro.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .programs__text {
   .no-indent;
+  margin-bottom: 10px;
+  padding-bottom: 21px;
 
   .text-font;
+  .font(14px, 18px);
   color: @grey-5;
-  font-size: 14px;
+
+  border-bottom: 1px solid #D9D9D9;
 }
 .programs__link {
-  font-size: 16px;
-  line-height: 16px;
+  .font(16px, 16px);
   text-transform: uppercase;
+
+  display: block;
+
+  padding: 9px 0;
+}
+
+@media (min-width: 785px) {
+  .programs {
+    margin-bottom: 50px;
+    margin-top: -5px;
+  }
+  .programs__item {
+    padding: 78px 52px 54px;
+    margin-bottom: 30px;
+  }
+  .programs__title {
+    .font(36px, 36px);
+
+    margin-bottom: 24px;
+    padding-left: 0;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: auto;
+      right: 10px;
+      bottom: auto;
+      top: 13px;
+
+      width: 200px;
+      height: 200px;
+
+      border-radius: 100px;
+
+      background-color: @green-1;
+    }
+  }
+  .programs__title--slim::after {
+    width: 140px;
+    height: 192px;
+
+    left: auto;
+    right: 40px;
+    bottom: auto;
+    top: 2px;
+
+    background-image: url(../img/icon-cat-slim.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .programs__title--pro::after {
+    width: 268px;
+    height: 112px;
+
+    left: auto;
+    right: -24px;
+    bottom: auto;
+    top: 59px;
+
+    background-image: url(../img/icon-cat-pro.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .programs__text {
+    .no-indent;
+    margin-bottom: 45px;
+
+    .font;
+
+    width: 340px;
+
+    border: none;
+  }
+  .programs__link {
+    display: inline-block;
+
+    .font(20px, 20px);
+  }
+}
+
+@media (min-width: 1457px) {
+  .programs {
+    margin-bottom: 72px;
+  }
+  .programs__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .programs__item {
+    margin-bottom: 0;
+
+    box-sizing: border-box;
+    width: 570px;
+  }
+  .programs__title {
+    padding-left: 162px;
+    margin-bottom: 80px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: auto;
+      top: -27px;
+
+      width: 100px;
+      height: 100px;
+
+      border-radius: 50px;
+
+      background-color: @green-1;
+    }
+    }
+    .programs__title--slim::after {
+    width: 70px;
+    height: 97px;
+
+    left: 15px;
+    bottom: auto;
+    top: -32px;
+
+    background-image: url(../img/icon-cat-slim.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    .programs__title--pro::after {
+    width: 134px;
+    height: 56px;
+
+    left: -19px;
+    bottom: auto;
+    top: -7px;
+
+    background-image: url(../img/icon-cat-pro.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+  .programs__text {
+    width: auto;
+
+    margin-bottom: 20px;
+  }
 }

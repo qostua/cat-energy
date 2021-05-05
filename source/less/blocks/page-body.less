@@ -1,3 +1,25 @@
+@import "../mixins.less";
+@import "../variables.less";
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../fonts/oswaldregular.woff2') format('woff2'),
+         url('../../fonts/oswaldregular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../fonts/oswaldmedium.woff2') format('woff2'),
+         url('../../fonts/oswaldmedium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 .page-body {
-  .main-font
+  .no-indent;
+  .main-font;
+
+  min-width: 280px;
 }

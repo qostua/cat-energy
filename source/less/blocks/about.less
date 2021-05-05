@@ -2,25 +2,134 @@
 @import "../variables.less";
 
 .about {
-
+  margin-bottom: 43px;
 }
 .about__title {
   .no-indent;
+  margin-bottom: 40px;
 
-  font-size: 36px;
-  line-height: 40px;
+  .font(36px, 40px);
+  font-weight: normal;
 }
 .about__list {
   .no-indent;
+
   .no-mark;
+
+  display: flex;
+  flex-direction: column;
 }
 .about__item {
+  padding-left: 80px;
+  margin-bottom: 26px;
 
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+
+    width: 60px;
+    height: 60px;
+
+    background-color: @green-1;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    left: 0;
+  }
+}
+.about__item--benefit::before {
+  background-image: url(../img/advantage-leaf.svg);
+}
+.about__item--powder::before {
+  background-image: url(../img/advantage-powder.svg);
+}
+.about__item--cutlery::before {
+  background-image: url(../img/advantage-dining.svg);
+}
+.about__item--clock::before {
+  background-image: url(../img/advantage-clock.svg);
 }
 .about__text {
   .no-indent;
 
   .text-font;
-  font-size: 14px;
-  line-height: 18px;
+  .font(14px, 18px);
+}
+
+@media (min-width: 785px) {
+  .about {
+    margin-bottom: 38px;
+  }
+  .about__title {
+    .font(60px, 60px);
+  }
+  .about__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about__item {
+    box-sizing: border-box;
+    width: 325px;
+    min-height: 280px;
+
+    padding: 145px 0 30px;
+    margin-bottom: 38px;
+
+    &:nth-last-child(1), &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+
+      top: 28px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+
+      font-size: 280px;
+      line-height: 264px;
+      color: #F2F2F2;
+    }
+
+    &:nth-child(1)::after {
+      content: "1";
+      right: 15px;
+    }
+    &:nth-child(2)::after {
+      content: "2";
+    }
+    &:nth-child(3)::after {
+      content: "3";
+    }
+    &:nth-child(4)::after {
+      content: "4";
+    }
+  }
+  .about__text {
+    .font;
+
+    width: 245px;
+  }
+}
+@media (min-width: 1457px) {
+  .about__item {
+    width: auto;
+    min-height: auto;
+  }
+  .about {
+    margin-bottom: 0px;
+  }
 }
