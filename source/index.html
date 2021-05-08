@@ -7,16 +7,29 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="page-header page-header--white-nav container">
-      <a class="page-header__logo link">
-        <picture>
-          <source media="(min-width: 1457px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 785px)" srcset="img/logo-tablet.svg">
-          <img class="logo page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта">
-        </picture>
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+    <header class="page-header container">
+      <div class="page-header__top-row">
+        <a class="page-header__logo link">
+          <picture>
+            <source media="(min-width: 1457px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 785px)" srcset="img/logo-tablet.svg">
+            <img class="logo page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта">
+          </picture>
+        </a>
+
+        <button class="main-nav__toggle main-nav__toggle--no-js" type="button">
+          <span class="visually-hidden">Меню</span>
+          <svg class="toggle-icon toggle-icon--open" width="26" height="26">
+            <g class="toggle-icon__rects">
+              <rect class="toggle-icon__top-rect" width="24" height="2" x="1" y="4"/>
+              <rect class="toggle-icon__middle-rect" width="24" height="2" x="1" y="12"/>
+              <rect class="toggle-icon__bottom-rect" width="24" height="2" x="1" y="20"/>
+            <g>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="main-nav main-nav--no-js">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--white">
             <a class="main-nav__link main-nav__link--active link">Главная</a>
@@ -133,7 +146,7 @@
             </div>
             <form class="example__form" action="index.html" method="post">
               <label class="example__form-lable" for="example__form-range">Было</label>
-              <input class="range" type="range" name="range" id="example__form-range" value="1" min="0" max="2">
+              <input class="range range--cat" type="range" name="range" id="example__form-range" value="500" min="0" max="1000">
               <label class="example__form-lable example__form-lable--after" for="example__form-range">Стало</label>
             </form>
           </div>
@@ -168,5 +181,8 @@
       </p>
       <p class="footer__copyright"><a class="footer__copyright-link link" href="https://htmlacademy.ru/courses">HTML Academy</a><span class="footer__copyright-logo"></span></p>
     </footer>
+
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/cat-slider.js"></script>
   </body>
 </html>
