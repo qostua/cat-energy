@@ -22,7 +22,13 @@
   color: white;
 }
 .btn--cart {
-  font-size: 16px;
+  .font(16px, 20px);
+}
+.btn--show-more {
+  background-color: @grey-1;
+
+  .font(16px, 20px);
+  color: @grey-5;
 }
 
 @media (min-width: 785px) {
@@ -30,5 +36,19 @@
     width: auto;
     font-size: 20px;
     padding: 18px 26px;
+  }
+  .btn--cart {
+    width: 100%;
+
+    padding: 9.5px 0;
+
+    .font(16px, 20px);
+  }
+  .btn--show-more {
+    width: 100%;
+
+    padding: 9.5px 0;
+
+    .font(16px, 20px);
   }
 }
