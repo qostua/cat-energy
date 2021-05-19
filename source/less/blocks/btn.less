@@ -24,10 +24,9 @@
 .btn--cart {
   .font(16px, 20px);
 }
-.btn--show-more {
+.btn--grey {
   background-color: @grey-1;
 
-  .font(16px, 20px);
   color: @grey-5;
 }
 
@@ -38,17 +37,22 @@
     padding: 18px 26px;
   }
   .btn--cart {
-    width: 100%;
+    width: 248px;
 
     padding: 9.5px 0;
 
     .font(16px, 20px);
   }
-  .btn--show-more {
+  .btn--order {
     width: 100%;
+  }
+}
 
-    padding: 9.5px 0;
-
-    .font(16px, 20px);
+@media (min-width: 1457px) {
+  .btn--cart {
+    width: 168px;
+  }
+  .btn--order {
+    width: 244px;
   }
 }
