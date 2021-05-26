@@ -1,34 +1,66 @@
 @import "../mixins.less";
 @import "../variables.less";
 
-.form-program {
-
-}
 .form-program__annotation {
   .no-indent;
+  margin-bottom: 37px;
 
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-}
-.form-program__cat-form {
 
-}
-.form-program__input-wrap {
-  .no-indent;
+  width: 230px;
 }
 .form-program__group-form {
   .no-indent;
 
   border: none;
 }
+.form-program__group-form--border {
+  border-bottom: 1px solid #D9D9D9;
+  border-top: 1px solid #D9D9D9;
+
+  padding: 21px 0;
+}
+.form-program__group-form--main-info {
+  margin-bottom: 23px;
+}
+.form-program__group-form--additional {
+  margin-bottom: 32px;
+}
 .form-program__group-form-title {
   .no-indent;
+  margin-bottom: 34px;
+  padding-top: 25px;
 
   font-size: 24px;
   line-height: 26px;
 }
+.form-program__input-wrap {
+  .no-indent;
+
+  margin-bottom: 14px;
+
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.form-program__input-wrap--change {
+  height: 30px;
+
+  margin-bottom: 12px;
+  padding-left: 46px;
+}
+.form-program__btn {
+  margin-bottom: 20px;
+}
 .form-program__footnote {
+  .no-indent;
+
   .text-font;
   font-size: 14px;
+  text-align: center;
 }
