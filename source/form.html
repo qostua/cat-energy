@@ -44,9 +44,9 @@
     </header>
 
     <main class="page-main">
-      <div class="container"><h1 class="page-main__title">Подбор программы</h1></div>
+      <div class="container"><h1 class="page-main__title page-main__title--form">Подбор программы</h1></div>
 
-      <section class="form-program container page-main__form-program">
+      <section class="form-program container container--form page-main__form-program">
         <h2 class="visually-hidden">Форма для подбора программы</h2>
         <p class="form-program__annotation">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
@@ -97,25 +97,25 @@
             <textarea class="input-textarea" name="comment" id="form-program__cat-form-comment" rows="8" cols="80" placeholder="Расскжите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form-program__group-form form-program__group-form--additional">
-            <legend class="form-program__group-form-title">Дополнительно</legend>
-            <p class="form-program__input-wrap form-program__input-wrap--change">
+            <legend class="form-program__group-form-title form-program__group-form-title--additional">Дополнительно</legend>
+            <p class="form-program__input-wrap form-program__input-wrap--change form-program__input-wrap--additional">
               <input class="input-checkbox visually-hidden" type="checkbox" name="additional" id="form-program__cat-form-additional-sweetener" value="sweetener">
               <label class="input-label input-label--checkbox" for="form-program__cat-form-additional-sweetener">Сахарозаменитель</label>
             </p>
-            <p class="form-program__input-wrap form-program__input-wrap--change">
+            <p class="form-program__input-wrap form-program__input-wrap--change form-program__input-wrap--additional">
               <input class="input-checkbox visually-hidden" type="checkbox" name="additional" id="form-program__cat-form-additional-water" value="water">
               <label class="input-label input-label--checkbox" for="form-program__cat-form-additional-water">Питьевая вода</label>
             </p>
-            <p class="form-program__input-wrap form-program__input-wrap--change">
+            <p class="form-program__input-wrap form-program__input-wrap--change form-program__input-wrap--additional">
               <input class="input-checkbox visually-hidden" type="checkbox" name="additional" id="form-program__cat-form-additional-milk" value="water">
               <label class="input-label input-label--checkbox" for="form-program__cat-form-additional-milk">Молоко</label>
             </p>
-            <p class="form-program__input-wrap form-program__input-wrap--change">
+            <p class="form-program__input-wrap form-program__input-wrap--change form-program__input-wrap--additional">
               <input class="input-checkbox visually-hidden" type="checkbox" name="additional" id="form-program__cat-form-additional-vitamins" value="water">
               <label class="input-label input-label--checkbox" for="form-program__cat-form-additional-vitamins">Витамины</label>
             </p>
           </fieldset>
-          <button class="btn btn--cart form-program__btn" type="submit" name="button">Отправить заявку</button>
+          <button class="btn btn--request form-program__btn" type="submit" name="button">Отправить заявку</button>
           <p class="form-program__footnote">* — Обязательные поля</p>
         </form>
       </section>
