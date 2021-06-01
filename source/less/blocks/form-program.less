@@ -20,6 +20,14 @@
   border-top: 1px solid #D9D9D9;
 
   padding: 21px 0;
+
+  margin-bottom: 25px;
+}
+.form-program__group-form--contacts {
+  margin-bottom: 25px;
+}
+.form-program__group-form--comment {
+  margin-bottom: 25px;
 }
 .form-program__group-form--main-info {
   margin-bottom: 23px;
@@ -30,7 +38,6 @@
 .form-program__group-form-title {
   .no-indent;
   margin-bottom: 34px;
-  padding-top: 25px;
 
   .font(24px, 26px);
 }
@@ -69,13 +76,22 @@
 
     width: 325px;
 
-    margin-bottom: 68px;
+    margin-bottom: 65px;
   }
   .form-program__group-form--border {
+    border: 1px solid #D9D9D9;
+
     padding: 25px 28px;
+    margin-bottom: 72px;
+  }
+  .form-program__group-form--contacts {
+    margin-bottom: 67px;
+  }
+  .form-program__group-form--comment {
+    margin-bottom: 61px;
   }
   .form-program__group-form--main-info {
-    margin-bottom: 76px;
+    margin-bottom: 72px;
   }
   .form-program__group-form--additional {
     display: flex;
@@ -87,15 +103,13 @@
   .form-program__group-form-title {
     .font(36px, 36px);
 
-    padding-top: 73px;
     margin-bottom: 75px;
   }
   .form-program__group-form-title--additional {
-    padding-top: 85px;
     margin-bottom: 58px;
   }
   .form-program__input-wrap {
-    margin-bottom: 27px;
+    margin-bottom: 20px;
   }
   .form-program__input-wrap--change {
     height: 40px;
@@ -109,6 +123,9 @@
 
     margin-bottom: 31px;
   }
+  .form-program__btn {
+    margin-bottom: 0;
+  }
   .form-program__footnote {
     display: inline-block;
 
@@ -118,4 +135,64 @@
 
     .font(16px, 16px);
   }
+}
+
+@media (min-width: 1457px) {
+  .form-program__cat-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .form-program__annotation {
+  }
+  .form-program__group-form--contacts {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-program__group-form--border {
+    width: 568px;
+    box-sizing: border-box;
+
+    margin-bottom: 68px;
+  }
+  .form-program__group-form--comment {
+    margin-bottom: 64px;
+  }
+  .form-program__group-form--main-info {
+    width: 568px;
+    box-sizing: border-box;
+
+    margin-bottom: 0;
+  }
+  .form-program__group-form--additional {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .form-program__group-form-title {
+  }
+  .form-program__group-form-title--additional {
+
+  }
+  .form-program__input-wrap {
+  }
+  .form-program__input-wrap--change {
+  }
+  .form-program__input-wrap--additional {
+    width: 246px;
+  }
+  .form-program__input-wrap--contacts {
+    width: 570px;
+
+    margin-bottom: 0;
+  }
+  .form-program__footnote {
+    margin-right: auto;
+    margin-left: 80px;
+
+    align-self: center;
+  }
+
 }
