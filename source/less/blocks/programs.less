@@ -91,9 +91,37 @@
   .font(16px, 16px);
   text-transform: uppercase;
 
-  display: block;
+  display: inline-block;
 
-  padding: 9px 0;
+  padding: 9px 50px 9px 0;
+
+  position: relative;
+
+  &:hover {
+    &::after {
+      background-image: url('../img/icon-right-arrow-verylong.svg');
+    }
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 3px;
+    top: 12px;
+
+    width: 32px;
+    height: 11px;
+
+
+    background-image: url('../img/icon-right-arrow-long.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 785px) {
@@ -168,6 +196,11 @@
     display: inline-block;
 
     .font(20px, 20px);
+
+    &::after {
+      right: -50px;
+      top: 14px;
+    }
   }
 }
 
@@ -234,5 +267,10 @@
     width: auto;
 
     margin-bottom: 20px;
+  }
+  .programs__link {
+    &::after {
+      right: -53px;
+    }
   }
 }
