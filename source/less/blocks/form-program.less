@@ -52,12 +52,24 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  position: relative;
 }
 .form-program__input-wrap--change {
   height: 30px;
 
   margin-bottom: 12px;
-  padding-left: 46px;
+
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+.form-program__logo {
+  position: absolute;
+
+  right: 15px;
+  top: 14px;
 }
 .form-program__btn {
   margin-bottom: 20px;
@@ -115,7 +127,9 @@
     height: 40px;
 
     margin-bottom: 13px;
-    padding-left: 60px;
+  }
+  .form-program__logo {
+    top: 17px;
   }
   .form-program__input-wrap--additional {
     width: 287px;
@@ -160,6 +174,8 @@
   }
   .form-program__group-form--comment {
     margin-bottom: 64px;
+
+    width: 100%;
   }
   .form-program__group-form--main-info {
     width: 568px;
@@ -180,6 +196,9 @@
   }
   .form-program__input-wrap--change {
   }
+  .form-program__logo {
+    right: 18px;
+  }
   .form-program__input-wrap--additional {
     width: 246px;
   }
@@ -194,5 +213,4 @@
 
     align-self: center;
   }
-
 }
