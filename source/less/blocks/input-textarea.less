@@ -6,10 +6,27 @@
 
   padding: 13px 15px;
 
+
   width: 100%;
   min-height: 150px;
 
   box-sizing: border-box;
+
+  &:hover {
+    border-color: @grey-3;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid @pink;
+  }
+
+  &:focus {
+    border-radius: 0;
+    outline: none;
+    border: 2px solid @grey-5;
+
+    padding: 12px 14px;
+  }
 }
 
 @media (min-width: 785px) {
