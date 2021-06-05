@@ -11,12 +11,14 @@
 
   position: relative;
 
+  padding: 6px 0 6px 46px;
+
   &::before {
     content: "";
 
     position: absolute;
-    left: -46px;
-    top: -6px;
+    left: 0;
+    top: 0;
 
     width: 30px;
     height: 30px;
@@ -31,8 +33,8 @@
   content: "";
 
   position: absolute;
-  left: -37.5px;
-  top: 1.5px;
+  left: 8.5px;
+  top: 7.5px;
 
   width: 13.5px;
   height: 13.5px;
@@ -46,12 +48,14 @@
 
   position: relative;
 
+  padding: 6px 0 6px 46px;
+
   &::before {
     content: "";
 
     position: absolute;
-    left: -46px;
-    top: -6px;
+    left: 0;
+    top: 0;
 
     width: 30px;
     height: 30px;
@@ -64,8 +68,8 @@
   content: "";
 
   position: absolute;
-  left: -39px;
-  top: 0px;
+  left: 7px;
+  top: 5px;
 
   transform: rotate(-45deg);
 
@@ -82,20 +86,26 @@
     .font(20px);
 
     &::before {
-      left: -63px;
+      left: 0px;
       width: 40px;
       height: 40px;
     }
   }
+  .input-label--radio {
+    padding-left: 60px;
+  }
+  .input-label--checkbox {
+    padding-left: 60px;
+  }
   .input-radio:checked + .input-label--radio::after {
-    left: -51.5px;
-    top: 4.5px;
+    left: 11.5px;
+    top: 10.5px;
     width: 18px;
     height: 18px;
   }
   .input-checkbox:checked + .input-label--checkbox::after {
-    left: -47px;
-    top: 5px;
+    left: 12px;
+    top: 11px;
   }
 }
 
