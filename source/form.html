@@ -8,7 +8,7 @@
   <body class="page-body">
     <header class="page-header container">
       <div class="page-header__top-row">
-        <a class="page-header__logo link">
+        <a href="index.html" class="page-header__logo page-header__logo link link--active">
           <picture>
             <source media="(min-width: 1457px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 785px)" srcset="img/logo-tablet.svg">
@@ -31,10 +31,10 @@
       <nav class="main-nav main-nav--no-js">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link link" href="index.html">Главная</a>
+            <a class="main-nav__link main-nav__link--inactive link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--inactive link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--active link">Подбор программы</a>
@@ -82,22 +82,33 @@
             </p>
           </fieldset>
           <fieldset class="form-program__group-form form-program__group-form--contacts">
-            <legend class="form-program__group-form-title"><label for="form-program__cat-form-master-email">Контактные данные (владельца кота)</label></legend>
+            <legend class="form-program__group-form-title title-line"><label for="form-program__cat-form-master-email">Контактные данные (владельца кота)</label></legend>
             <p class="form-program__input-wrap form-program__input-wrap--contacts">
               <label class="input-label" for="form-program__cat-form-master-email">E-mail:*</label>
-              <input class="input-text input-text--email" type="email" name="master-email" id="form-program__cat-form-master-email" placeholder="kuklachev@gmail.com" required>
+              <input class="input-text" type="email" name="master-email" id="form-program__cat-form-master-email" placeholder="kuklachev@gmail.com" required>
+              <svg class="form-program__logo" width="20" height="20" x="0" y="0" viewBox="0 0 17 13">
+                <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+              </svg>
             </p>
             <p class="form-program__input-wrap form-program__input-wrap--contacts">
               <label class="input-label" for="form-program__cat-form-master-phone">Телефон:*</label>
-              <input class="input-text input-text--tel" type="tel" name="master-phone" id="form-program__cat-form-master-phone" placeholder="8 (960) 900-60-90" required>
+              <input class="input-text" type="tel" name="master-phone" id="form-program__cat-form-master-phone" placeholder="8 (960) 900-60-90" required>
+              <svg class="form-program__logo" width="20" height="20" x="0px" y="0px" viewBox="0 0 20 20">
+                <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                <path
+                  d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                C7.8,20,8.1,19.7,8.1,19.4z"/>
+              </svg>
             </p>
           </fieldset>
           <fieldset class="form-program__group-form form-program__group-form--comment">
-            <legend class="form-program__group-form-title"><label for="form-program__cat-form-comment">Комментарий</label></legend>
+            <legend class="form-program__group-form-title title-line"><label for="form-program__cat-form-comment">Комментарий</label></legend>
             <textarea class="input-textarea" name="comment" id="form-program__cat-form-comment" rows="8" cols="80" placeholder="Расскжите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form-program__group-form form-program__group-form--additional">
-            <legend class="form-program__group-form-title form-program__group-form-title--additional">Дополнительно</legend>
+            <legend class="form-program__group-form-title form-program__group-form-title--additional title-line">Дополнительно</legend>
             <p class="form-program__input-wrap form-program__input-wrap--change form-program__input-wrap--additional">
               <input class="input-checkbox visually-hidden" type="checkbox" name="additional" id="form-program__cat-form-additional-sweetener" value="sweetener">
               <label class="input-label input-label--checkbox" for="form-program__cat-form-additional-sweetener">Сахарозаменитель</label>
@@ -147,7 +158,7 @@
         <a class="page-footer__social-link page-footer__social-link--insta link" href="https://instagram.com"><span class="visually-hidden">Инстаграм</span></a>
         <a class="page-footer__social-link page-footer__social-link--fb link" href="https://facebook.com"><span class="visually-hidden">Фейсбук</span></a>
       </p>
-      <p class="footer__copyright"><a class="footer__copyright-link link" href="https://htmlacademy.ru/courses">HTML Academy</a><span class="footer__copyright-logo"></span></p>
+      <p class="footer__copyright"><a class="footer__copyright-link link" href="https://htmlacademy.ru/courses"><span>HTML Academy</span><span class="footer__copyright-logo"></span></a></p>
     </footer>
 
     <script src="js/mobile-menu.js"></script>
