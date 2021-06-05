@@ -10,6 +10,14 @@
 }
 .page-footer__logo-text {
   margin-bottom: 25px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 .page-footer__social {
   display: flex;
@@ -40,6 +48,14 @@
   background-position: center;
 
   filter: grayscale(1) brightness(65%);
+
+  &:hover {
+    filter: grayscale(0) brightness(1);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 .page-footer__social-link--vk {
   background-size: 23px 16px;
@@ -57,10 +73,6 @@
   .no-indent;
   padding: 20px 0;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   width: 100%;
 
   .text-font;
@@ -68,7 +80,19 @@
   color: @grey-5;
 }
 .footer__copyright-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  width: 100%;
+
+  &:hover .footer__copyright-logo {
+    filter: grayscale(0) brightness(1);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 .footer__copyright-logo {
   display: inline-block;
