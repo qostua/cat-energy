@@ -10,6 +10,7 @@
   .font(16px, 18px);
   text-transform: uppercase;
   color: @grey-5;
+
   &::placeholder {
     color: @grey-5;
   }
@@ -17,9 +18,35 @@
   border-radius: 0;
   border: 1px solid #E7E7E7;
 
-  height: 43px;
+  height: 45px;
+
+  box-sizing: border-box;
 
   flex-grow: 1;
+
+  &:hover {
+    border-color: @grey-3;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid @pink;
+  }
+
+  &:focus {
+    border-radius: 0;
+    outline: none;
+    border: 2px solid @grey-5;
+
+    padding: 0 14px;
+  }
+
+  &:focus + .form-program__logo {
+    fill: @green-1;
+  }
+
+  &:invalid:not(:placeholder-shown) + .form-program__logo {
+    fill: @pink;
+  }
 }
 .input-textarea {
   &:extend(.input-text);
@@ -35,6 +62,6 @@
 
     margin-left: 21px;
 
-    height: 50px;
+    height: 52px;
   }
 }
