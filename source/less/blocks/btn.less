@@ -4,21 +4,21 @@
 .btn {
   .no-indent;
   padding: 11px 0;
-  box-sizing: border-box;
-
-  display: inline-block;
-
-  width: 100%;
-
-  background: @green-1;
-
-  border: none;
 
   .main-font;
   .font(14px, 18px);
   text-transform: uppercase;
   text-align: center;
   color: white;
+
+  display: inline-block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  border: none;
+
+  background: @green-1;
 
   &:hover {
     background: @green-2;
@@ -28,15 +28,15 @@
   }
 }
 .btn--cart {
-  .font(16px, 20px);
+  .font(16px, 18px);
 }
 .btn--request {
-  .font(16px, 20px);
+  .font(16px, 18px);
 }
 .btn--grey {
-  background-color: @grey-1;
-
   color: @grey-5;
+
+  background-color: @grey-1;
 
   &:hover {
     background: @grey-2;
@@ -48,23 +48,25 @@
 
 @media (min-width: 785px) {
   .btn {
-    width: auto;
-    font-size: 20px;
     padding: 18px 26px;
+
+    font-size: 20px;
+
+    width: auto;
   }
   .btn--cart {
-    width: 248px;
-
     padding: 9.5px 0;
 
     .font(16px, 20px);
+
+    width: 248px;
   }
   .btn--request {
+    padding: 11px;
+
     .font(20px);
 
     width: 282px;
-
-    padding: 11px;
   }
   .btn--order {
     width: 100%;
@@ -76,9 +78,9 @@
     width: 168px;
   }
   .btn--request {
-    width: 570px;
-
     padding: 11px;
+
+    width: 570px;
   }
   .btn--order {
     width: 244px;
