@@ -2,35 +2,39 @@
 @import "../variables.less";
 
 .input-textarea {
-  .no-indent;
+  &:extend(.input-text);
 
+  .no-indent;
   padding: 13px 15px;
 
+  &::placeholder {
+    color: @grey-5;
+  }
 
   width: 100%;
   min-height: 150px;
-
   box-sizing: border-box;
+  resize: none;
 
   &:hover {
     border-color: @grey-3;
   }
-
   &:invalid:not(:placeholder-shown) {
     border: 2px solid @pink;
   }
-
   &:focus {
+    padding: 12px 14px;
+
     border-radius: 0;
     outline: none;
     border: 2px solid @grey-5;
-
-    padding: 12px 14px;
   }
 }
 
 @media (min-width: 785px) {
   .input-textarea {
+    padding: 11px 19px;
+
     min-height: 174px;
   }
 }

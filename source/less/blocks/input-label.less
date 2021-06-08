@@ -7,18 +7,14 @@
   color: @grey-5;
 }
 .input-label--radio {
+  padding: 6px 0 6px 46px;
+
   color: @grey-6;
 
   position: relative;
 
-  padding: 6px 0 6px 46px;
-
   &::before {
     content: "";
-
-    position: absolute;
-    left: 0;
-    top: 0;
 
     width: 30px;
     height: 30px;
@@ -26,52 +22,49 @@
 
     border-radius: 50%;
     border: 1px solid @grey-3;
-  }
-}
-
-.input-radio:checked + .input-label--radio::after {
-  content: "";
-
-  position: absolute;
-  left: 8.5px;
-  top: 7.5px;
-
-  width: 13.5px;
-  height: 13.5px;
-
-  background-color: @green-1;
-
-  border-radius: 50%;
-}
-.input-label--checkbox {
-  color: black;
-
-  position: relative;
-
-  padding: 6px 0 6px 46px;
-
-  &::before {
-    content: "";
 
     position: absolute;
     left: 0;
     top: 0;
+  }
+}
+.input-radio:checked + .input-label--radio::after {
+  content: "";
+
+  width: 13.5px;
+  height: 13.5px;
+
+  border-radius: 50%;
+
+  background-color: @green-1;
+
+  position: absolute;
+  left: 8.5px;
+  top: 7.5px;
+}
+.input-label--checkbox {
+  padding: 6px 0 6px 46px;
+
+  color: black;
+
+  position: relative;
+
+  &::before {
+    content: "";
 
     width: 30px;
     height: 30px;
     box-sizing: border-box;
 
     border: 1px solid @grey-3;
+
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 .input-checkbox:checked + .input-label--checkbox::after {
   content: "";
-
-  position: absolute;
-  left: 7px;
-  top: 5px;
-
-  transform: rotate(-45deg);
 
   width: 17px;
   height: 10px;
@@ -79,6 +72,12 @@
 
   border-left: 1.9px solid @green-1;
   border-bottom: 1.9px solid @green-1;
+
+  position: absolute;
+  left: 7px;
+  top: 5px;
+
+  transform: rotate(-45deg);
 }
 
 @media (min-width: 785px) {
@@ -86,9 +85,10 @@
     .font(20px);
 
     &::before {
-      left: 0px;
       width: 40px;
       height: 40px;
+
+      left: 0px;
     }
   }
   .input-label--radio {
@@ -98,17 +98,14 @@
     padding-left: 60px;
   }
   .input-radio:checked + .input-label--radio::after {
-    left: 11.5px;
-    top: 10.5px;
     width: 18px;
     height: 18px;
+
+    left: 11.5px;
+    top: 10.5px;
   }
   .input-checkbox:checked + .input-label--checkbox::after {
     left: 12px;
     top: 11px;
   }
-}
-
-@media (min-width: 1457px) {
-
 }
