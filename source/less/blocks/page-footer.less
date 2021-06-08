@@ -2,47 +2,39 @@
 @import "../variables.less";
 
 .page-footer {
+  padding: 36px 40px 22px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 35px 40px 22px;
 }
 .page-footer__logo-text {
   margin-bottom: 25px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 .page-footer__social {
-  display: flex;
-  justify-content: center;
   .no-indent;
-
-  width: 100%;
+  padding: 15px 0;
 
   text-align: center;
 
-  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
 
   border-top: 1px solid #D9D9D9;
   border-bottom: 1px solid #D9D9D9;
 }
 .page-footer__social-link {
-  display: inline-block;
-  width: 33px;
-  height: 33px;
-
   margin-right: 22px;
-
   &:last-child {
     margin-right: 0;
   }
+
+  display: inline-block;
+
+  width: 33px;
+  height: 33px;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -52,7 +44,6 @@
   &:hover {
     filter: grayscale(0) brightness(1);
   }
-
   &:active {
     opacity: 0.3;
   }
@@ -68,16 +59,18 @@
 .page-footer__social-link--fb {
   background-size: 18px 18px;
   background-image: url(../img/icon-fb.svg);
+  background-position: 40%;
 }
 .footer__copyright {
   .no-indent;
   padding: 20px 0;
 
-  width: 100%;
-
   .text-font;
   font-size: 16px;
+  letter-spacing: -0.6px;
   color: @grey-5;
+
+  width: 100%;
 }
 .footer__copyright-link {
   display: flex;
@@ -89,7 +82,6 @@
   &:hover .footer__copyright-logo {
     filter: grayscale(0) brightness(1);
   }
-
   &:active {
     opacity: 0.3;
   }
@@ -108,15 +100,17 @@
 
 @media (min-width: 785px) {
   .page-footer {
+    padding: 34px 40px 61px;
+
     flex-direction: row;
     justify-content: space-between;
-
-    padding-bottom: 61px;
   }
   .page-footer__logo-text-wrap {
-    width: 165px;
+    margin-top: 7px;
 
     display: flex;
+
+    width: 165px;
   }
   .page-footer__logo-text {
     margin-bottom: 0;
@@ -125,9 +119,11 @@
     width: auto;
   }
   .footer__copyright {
-    width: 165px;
-
     padding: 0;
+
+    letter-spacing: 0;
+
+    width: 165px;
   }
   .page-footer__social {
     border: none;
@@ -144,11 +140,11 @@
   }
   .page-footer__social-link--fb {
     background-size: 20px 28px;
-    background-position: left;
+    background-position: -3px 2px;
   }
 }
 @media (min-width: 1457px) {
   .page-footer {
-    padding-top: 41px;
+    padding-top: 37px;
   }
 }
