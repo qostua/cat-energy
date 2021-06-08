@@ -4,26 +4,26 @@
 
 .additional-products__title {
   .no-indent;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 
   .font(24px, 26px);
   font-weight: 400;
 }
 .additional-products__list {
   .no-indent;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   .no-mark;
 }
 .additional-products__item {
-  padding-top: 13px;
-  margin-bottom: 16px;
+  padding-top: 14px;
+  margin-bottom: 17px;
 
   border-top: 1px solid @grey-3;
 
   &:last-child {
     margin-bottom: 0;
-    padding-bottom: 15px;
+    padding-bottom: 17px;
 
     border-bottom: 1px solid @grey-3;
   }
@@ -40,19 +40,19 @@
   .no-indent;
   margin-bottom: 14px;
 
-  display: flex;
-  justify-content: space-between;
-
   .text-font;
   .font(14px, 14px);
   color: @grey-5;
+
+  display: flex;
+  justify-content: space-between;
 }
 .additional-products__features-value {
   .no-indent;
 }
 .additional-products__present {
   .no-indent;
-  padding: 185px 60px 43px;
+  padding: 185px 60px 44px;
 
   .text-font;
   .font(16px, 20px);
@@ -62,16 +62,17 @@
   box-sizing: border-box;
 
   background-color: @green-1;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url(../img/gift-photo-mobile@2x.jpg);
+  }
 
   position: relative;
 
   &::before {
     content: "";
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 53px;
 
     width: 78px;
     height: 80px;
@@ -79,47 +80,55 @@
     background-image: url(../img/icon-gift.svg);
     background-position: center;
     background-repeat: no-repeat;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 53px;
   }
 }
 
 @media (min-width: 785px) {
   .additional-products__title {
-    .font(36px, 36px);
+    margin-bottom: 79px;
 
-    margin-bottom: 80px;
+    .font(36px, 36px);
   }
   .additional-products__list {
-    margin-bottom: 70px;
+    margin-bottom: 69px;
   }
   .additional-products__item {
+    padding: 26px 38px 27px;
+    margin-bottom: 0;
+    &:last-child {
+      padding: 26px 38px 26px;
+    }
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    padding: 26px 38px 27px;
+    align-items: flex-end;
 
     border-left: 1px solid @grey-3;
     border-right: 1px solid @grey-3;
-
-    margin-bottom: 0;
-
-    &:last-child {
-      margin-bottom: 0;
-      padding: 26px 38px 26px;
-    }
   }
   .additional-products__item-title {
-    .font(20px, 20px);
-
     margin-bottom: 0;
+
+    .font(20px, 20px);
   }
   .additional-products__features {
-    .font(16px, 20px);
-
     margin-bottom: 0;
+
+    .font(16px, 16px);
   }
   .additional-products__features-title {
-    margin-right: 50px;
+    margin-right: 48px;
+  }
+  .additional-products__features-value {
+    text-align: right;
+
+    min-width: 44px;
   }
   .additional-products__btn {
     margin-top: 26px;
@@ -128,6 +137,11 @@
     padding: 70px 125px 70px 425px;
 
     text-align: left;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/gift-photo-tablet@2x.jpg);
+    }
 
     &::before {
       left: 120px;
@@ -140,44 +154,47 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .additional-products__title {
-    padding: 0;
-  }
   .additional-products__list {
-    flex-grow: 1;
-
     margin-right: 80px;
     margin-bottom: 0;
+
+    flex-grow: 1;
   }
   .additional-products__item {
     padding: 16px 0;
-
-    align-items: center;
+    &:last-child {
+      padding: 16px 0;
+    }
 
     border-left: none;
     border-right: none;
 
-    &:last-child {
-      padding: 16px 0;
-    }
+    align-items: center;
   }
   .additional-products__features {
-    margin-right: 40px;
-    margin-left: auto;
+    margin: 9px 40px 0 auto;
 
-    width: 290px;
+    width: 286px;
   }
   .additional-products__features-title {
     margin-right: auto;
   }
+  .additional-products__features-value {
+    text-align: left;
+  }
+  .additional-products__btn {
+    margin-top: 0;
+  }
   .additional-products__present {
+    padding: 187px 42px 42px;
+
     text-align: center;
 
     width: 245px;
 
-    padding: 190px 42px 42px;
-  }
-  .additional-products__btn {
-    margin-top: 0;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/gift-photo-desktop@2x.jpg);
+    }
   }
 }
