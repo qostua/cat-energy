@@ -5,8 +5,10 @@
 .thumb {
   width: 6px;
   height: 6px;
-  background: @color-progress;
+
   border-radius: 0 50px 50px 0;
+
+  background: @color-progress;
 }
 
 .range {
@@ -17,13 +19,13 @@
   height: 12px;
   width: 85px;
 
-  overflow: hidden;
-
-  cursor: pointer;
-
   border: 3px solid @color-fill;
   border-radius: 6px;
   box-shadow: 0 0 0 1px @color-border;
+
+  overflow: hidden;
+
+  cursor: pointer;
 
   -webkit-appearance: none;
 }
@@ -48,14 +50,14 @@
 }
 
 .range::-ms-track {
-  border: none;
-
   color: transparent;
+
+  border: none;
 }
 .range::-ms-fill-lower {
-  background: @color-progress;
-
   border-radius: 50px;
+
+  background: @color-progress;
 }
 .range::-ms-fill-upper {
   border-radius: 50px;
@@ -75,31 +77,33 @@
 
 @media (min-width: 785px) {
   .thumb {
-    width: 34px;
-    height: 34px;
-
-    background: #68B738;
+    width: 32px;
+    height: 32px;
 
     border-radius: 100px;
     border: 12px solid white;
+
+    background: #68B738;
+
     box-shadow: 0 0 0 1px #DCDCDC;
     filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
   }
 
 
   .range {
-    overflow: visible;
+    margin: 0 21px 10px;
 
-    box-shadow: none;
     width: 430px;
     height: 6px;
-
-    margin: 0 21px;
 
     border: none;
     border-radius: 3px;
 
     background-color: #DCDCDC;
+
+    box-shadow: none;
+
+    overflow: visible;
 
     &:hover::-webkit-slider-thumb {
       filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.19));
@@ -135,21 +139,21 @@
   }
 
   .range::-ms-track {
-    overflow: visible;
+    color: transparent;
 
     border: none;
 
-    color: transparent;
+    overflow: visible;
   }
   .range::-ms-fill-lower {
-    background: #DCDCDC;
-
     border-radius: 50px;
+
+    background: #DCDCDC;
   }
   .range::-ms-fill-upper {
-    background: #DCDCDC;
-
     border-radius: 50px;
+
+    background: #DCDCDC;
   }
   .range::-ms-thumb {
     .thumb;
